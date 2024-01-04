@@ -118,6 +118,14 @@ public class Server implements Runnable {
 
         }
 
+        public void sendPrivateMessage(String recipientName, String message){
+            for(ConnectionHandler ch: connections){
+                if( ch != null && ch.nickname.equals(recipientName)){
+                    // send message
+                }
+            }
+        }
+
         public void shutdown() {
             try {
 
