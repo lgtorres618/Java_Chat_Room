@@ -98,7 +98,15 @@ public class Server implements Runnable {
                     } else if (message.startsWith("/quit")) {
                         broadcast(nickname + "left the chat!");
                         shutdown();
-                    } else {
+
+
+                    }else if (message.startsWith("/private")) {
+                        broadcast(nickname + "whispers");
+
+
+
+                    }
+                    else {
                         broadcast(nickname + ":" + message);
                     }
                 }
